@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    #formContainer {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff;
+      padding: 20px;
+      float:left;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Common style for form groups */
+    .formGroup {
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .formGroup label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      margin-right: 20px; /* Add margin to the right of the label */
+    }
+
+    input,
+    textarea,
+    picture {
+      width: 100%;
+      min-width: 200px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: none; /* Disable textarea resizing */
+    }
+
+
+
+    /* Center align for input1, input2, input3, and input4 */
+    .centerInputs {
+      align-items: center;
+    }
+
+    /* Flex-start align for textarea and picture */
+    .flexStartInputs {
+      align-items: first baseline;
+    }
+
+    .flexInputs {
+      padding-top: 15px;
+      align-items: initial;
+    }
+
+    #imageContainer {
+      text-align: center;
+    }
+
+    #formImage {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-top: -10px;
+    }
+
+    /* Added a new class for the input2 and input3 container */
+    .twoInputs {
+      display: flex;
+      flex-direction: row;
+      
+    }
+
+    /* Added styles for input2 and input3 */
+    .twoInputs input {
+      width:100%;
+       /* Add margin between input2 and input3 */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="formContainer">
+    <div class="formGroup centerInputs">
+      <label style="margin-left: 13px; color: #bccbd8;" for="input1">input1</label>
+      <input type="text" id="input1" name="input1" placeholder="input1" required>
+    </div>
+
+    <!-- Modified to use the new class for input2 and input3 container -->
+    <div class="formGroup twoInputs centerInputs">
+      <label style="margin-left: 13px; color: #8594a6;" for="input2">input2</label>
+      <input type="text" id="input2" name="input2" placeholder="input2" required>
+      <label style="margin-left: 50px; color: #8594a6;" for="input3">input3</label>
+      <input type="text" id="input3" name="input3" placeholder="input3" required>
+    </div>
+
+    <div class="formGroup centerInputs">
+      <label style="margin-left: 13px; color: #4b6387;" for="input4">input4</label>
+      <input style="margin-right: 30%;" type="text" id="input4" name="input4" placeholder="input4" required>
+    </div>
+
+    <div class="formGroup flexStartInputs">
+      <label for="textarea">textarea</label>
+      <textarea id="textarea" name="textarea" rows="4" placeholder="make it not resizable" required></textarea>
+    </div>
+
+    <div class="formGroup flexInputs" id="imageContainer">
+      <em><label style="text-decoration: underline;" for="picture">picture1</label></em>
+      <img id="formImage" src="https://media.istockphoto.com/id/1173935107/photo/long-wave-on-the-coast-dawn-on-the-sea-tunisia.jpg?s=612x612&w=0&k=20&c=Q-O-34NjJpbiOtNlGGUGEllKATijp34X_xfZphY7VtE=" alt="Image">
+    </div>
+
+  </div>
+
+</body>
+
+</html>
